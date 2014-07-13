@@ -1,0 +1,25 @@
+<h1>Listing ramen_images</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Test</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ramen_images.each do |ramen_image| %>
+      <tr>
+        <td><%= ramen_image.test %></td>
+        <td><%= link_to 'Show', ramen_image %></td>
+        <td><%#= link_to 'Edit', edit_ramen_image_path(ramen_image) %></td>
+        <td><%= link_to 'Destroy', ramen_image, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ramen image', new_ramen_image_path %>

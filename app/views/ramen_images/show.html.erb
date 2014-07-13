@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p style="font-size: 30px; color:red;">たぶんラーメンです！</p>
+
+<%= image_tag @ramen_image.image.url, style: "width: 300px;" %>
+<br /><br />
+
+<%#= link_to 'Edit', edit_ramen_image_path(@ramen_image) %>
+<%= link_to 'もう一度判定する', new_ramen_image_path %>

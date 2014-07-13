@@ -1,0 +1,21 @@
+<%= form_for(@ramen_image) do |f| %>
+  <% if @ramen_image.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ramen_image.errors.count, "error") %> prohibited this ramen_image from being saved:</h2>
+
+      <ul>
+      <% @ramen_image.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :image, "画像を指定" %><br>
+    <%= f.file_field :image %>
+  </div>
+  <div class="actions">
+    <%= f.submit "ラーメン判定する" %>
+  </div>
+<% end %>
